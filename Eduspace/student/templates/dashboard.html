@@ -1,0 +1,9 @@
+{% extends 'base.html'%}
+{% block content %}
+student
+{% for i in images %}
+
+<img src="/media/{{i.profile_img}}" class="img-circle " alt="Cinque Terre" style=" height:50px;">
+
+{% endfor %}
+{% endblock %}

@@ -1,0 +1,7 @@
+{% extends 'base.html'%}
+{% block content %}
+<h1>{{  request.session.email   }}</h1>
+<a href="/admin_dash">admin</a>
+<br/>
+<a href="/student">student</a>
+{% endblock %}

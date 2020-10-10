@@ -1,0 +1,99 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Unica+One&display=swap" rel="stylesheet">
+  <title>EduSpace Inc</title>
+  <link rel="icon" href="img/eduspace-logo.ico">
+<link rel="stylesheet" href={% static 'style.css'%}>
+</head>
+
+<body>
+  <!-- header START-->
+  <header>
+    <nav>
+      <ul id="main_menu">
+        <li><a href="#home" class="menu_link">Home</a></li>
+        <li><a href="#about-us" class="menu_link">About Us</a></li>
+        <li><a href="#mock-tests" class="menu_link">Mock Tests</a></li>
+        <li><a href="#projects" class="menu_link">Projects</a></li>
+
+        <li><a href="/register" class="menu_link">Sign Up</a></li>
+        {% if request.session.customer %}
+		<li><a href="/" class="menu_link">dashboard</a></li>
+		<li><a href="/logout" class="menu_link">Logout</a></li>
+    {% else %}
+    <li><a href="/login" class="menu_link" style="float:right;">Login</a></li>
+		{% endif %}        
+      </ul>
+    </nav>
+  </header>
+  <!-- header ENDS-->
+  <!-- CORE CONTENT START-->
+  <main>
+  <section class="parallax">
+    <header id="home">
+      <div class="header_text">
+        <h1>EduSpace Inc.</h1>
+        <p>space for Excellency 
+          <p>
+    
+            <a id="header_button" href="#contact-us">Contact Us</a>
+      </div>
+    </header>
+  </section>
+  <section id="about-us" class="content">
+    <div class="text">
+      <h2>About Us</h2><br><hr><br>
+      <p>Lorem ipsum dolor sit amet, sed cras quis, felis nulla proin quisque asperiores officia, ipsum libero praesent aliquet, quis congue eget sem varius. Nibh semper metus pellentesque interdum amet, vel nulla nobis amet porttitor, et sit. Elementum suscipit pellentesque a, odio habitant elit nulla at diam. Ut justo quisque, wisi praesent aliquam, est accumsan laborum ut est, velit tortor laoreet, amet metus.</p>
+      
+            </div>
+        </section>
+        <section class="parallax "></section>
+        <section id="mock-tests" class="content">
+          <div class="text">
+            <h2>Mock Tests</h2><br><hr><br>
+            <p>Lorem ipsum dolor sit amet, sed cras quis, felis nulla proin quisque asperiores officia, ipsum libero praesent aliquet, quis congue eget sem varius. Nibh semper metus pellentesque interdum amet, vel nulla nobis amet porttitor, et sit. Elementum suscipit pellentesque a, odio habitant elit nulla at diam. Ut justo quisque, wisi praesent aliquam, est accumsan laborum ut est, velit tortor laoreet, amet metus.</p>
+            
+                  </div>
+              </section>
+              <section class="parallax "></section>
+              <section id="projects" class="content">
+                <div class="text">
+                  <h2>Projects</h2><br><hr><br>
+                          
+                  <section id="project">
+                    <ul class="flex_container flex_list">
+                      <li class="flex_item">Lorem ipsum</li>
+                      <li class="flex_item">Lorem ipsum</li>
+                      <li class="flex_item">Lorem ipsum</li>
+                      <li class="flex_item">Lorem ipsum</li>
+                    </ul>
+                  </section>
+      
+                        </div>
+                    </section>
+                    <section class="parallax "></section>
+            </div>
+        </section>
+      </main>
+      <!-- CORE CONTENT ENDS-->
+      <!-- FOOTER START-->
+      <footer>
+        <div class='container'>
+        <div class='row'>
+            <div class='col-md-12'>
+                <ul>
+                    <li><a id="contact-us" href="#"><b>Contact Us</b></a></li>
+                    <li><a href='#'>Twitter</a></li>
+                    <li><a href='#'>Facebook</a></li>
+                    <li><a href='#'>LinkedIn</a></li>
+                    <p>&copy; Copyright 2020</p>
+                </ul>
+            </div>
+        </div>
+        </div>
+    </footer>
+      <!--FOOTER ENDS-->
+    </body>
+</html>
